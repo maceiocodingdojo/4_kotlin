@@ -16,14 +16,16 @@ class TrocoTest : Spek({
             assertEquals(troco.isNotEmpty(), true)
         }
 
-        it("verificar se o valor recebido é menor valor total"){
-            val troco = passaTroco.calculaTroco(BigDecimal("10"), BigDecimal("5"))
-            assertEquals(troco, listOf<BigDecimal>())
+        it("verificar a quantidade de cedulas com valor de troco igual a 1"){
+            val troco = passaTroco.calculaTroco(BigDecimal("10"), BigDecimal("9"))
+            assertEquals(troco.size ,1)
+            assertEquals(troco.get(PassaTroco.UM_REAL) ,1)
         }
 
-        it("verificar a quantidade de cedulas "){
-            val troco = passaTroco.calculaTroco(BigDecimal("10"), BigDecimal("1"))
-            assertEquals(troco.get(0) ,9)
+        it("verificar a quantidade de cedulas com valor de troco igual a 2"){
+            val troco = passaTroco.calculaTroco(BigDecimal("10"), BigDecimal("8"))
+            assertEquals(troco.size ,1)
+            assertEquals(troco.get(0) ,2)
         }
     }
 })

@@ -2,25 +2,21 @@ import java.math.BigDecimal
 import java.util.*
 
 class PassaTroco{
-    fun calculaTroco(valorCompra: BigDecimal, valorRecebido: BigDecimal): List<BigDecimal> {
-        var diferenca : BigDecimal = valorRecebido - valorCompra;
-        var listDeTroco : List<BigDecimal>? = null;
-
-        if(valorCompra > valorRecebido){
-            return listOf<BigDecimal>()
-        }
-
+    val UM_REAL = 1
+    fun calculaTroco(valorCompra: BigDecimal, valorRecebido: BigDecimal): List<Int> {
+        var diferenca : BigDecimal = valorRecebido - valorCompra
+        var listDeTroco : List<Int>? = null
 
         if(valorCompra.compareTo(valorRecebido) != 0){
 
             var cedula : BigDecimal = diferenca
             listDeTroco = ArrayList()
-            listDeTroco.add(cedula)
+            listDeTroco.add(1)
 
-            return listOf(BigDecimal.ONE)
+            return listOf(1)
         }
 
-        return listOf<BigDecimal>()
+        return listOf<Int>()
     }
 
 }
