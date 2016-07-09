@@ -8,7 +8,7 @@ class TrocoTest : Spek({
 
         it("sem troco, deve retornar uma list vazia") {
             val troco = passaTroco.calculaTroco(BigDecimal("10"), BigDecimal("10"))
-            assertEquals(troco, listOf<BigDecimal>())
+            assertEquals(troco, mapOf<Int, Int>())
         }
 
         it("com troco devemos retorna uma lista com pelo menos um valor"){
@@ -21,6 +21,12 @@ class TrocoTest : Spek({
             assertEquals(troco.size ,1)
             assertEquals(troco.get(PassaTroco.UM_REAL) ,1)
         }
+        it("verificar a quantidade de cedulas com valor de troco igual a 1"){
+            val troco = passaTroco.calculaTroco(BigDecimal("10"), BigDecimal("12"))
+            assertEquals(troco.size ,2)
+//            assertEquals(troco.get(PassaTroco.UM_REAL) ,1)
+        }
+
 
 //        it("verificar a quantidade de cedulas com valor de troco igual a 2"){
 //            val troco = passaTroco.calculaTroco(BigDecimal("10"), BigDecimal("8"))

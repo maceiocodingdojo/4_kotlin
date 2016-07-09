@@ -8,18 +8,14 @@ class PassaTroco{
 
     fun calculaTroco(valorCompra: BigDecimal, valorRecebido: BigDecimal): Map<Int, Int> {
         var diferenca : BigDecimal = valorRecebido - valorCompra
-        var listDeTroco : List<Int>? = null
+        var listDeTroco : Map<Int, Int> = mapOf()
 
         if(valorCompra.compareTo(valorRecebido) != 0){
-
-            var cedula : BigDecimal = diferenca
-            listDeTroco = ArrayList()
-            listDeTroco.add(1)
 
             return mapOf(1 to 1)
         }
 
-        return listOf<Int>()
+        return listDeTroco
     }
 
 }
