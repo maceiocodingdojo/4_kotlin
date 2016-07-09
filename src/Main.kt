@@ -8,7 +8,9 @@ class PassaTroco{
         val DEZ_REAIS = 10
         val CINQUENTA_REAIS = 50
         val CEM_REAIS = 100
+        val LIST_CEDULAS = Arrays.asList(UM_REAL,CINCO_REAIS,DEZ_REAIS,CINQUENTA_REAIS,CEM_REAIS)
     }
+
 
     fun calculaTroco(valorCompra: BigDecimal, valorRecebido: BigDecimal): Map<Int, Int> {
         var diferenca : BigDecimal = valorRecebido - valorCompra
@@ -24,13 +26,15 @@ class PassaTroco{
         return listDeTroco
     }
 
+    getCedulas(){
+
+    }
     private fun calcularMenorQua(diferenca: BigDecimal) : Int{
 
 
+        return when(LIST_CEDULAS){
 
-        return when(diferenca){
-
-            BigDecimal("1") -> UM_REAL
+            LIS -> UM_REAL
             BigDecimal("5") -> CINCO_REAIS
             else -> 0
         }
