@@ -6,11 +6,9 @@ class PassaTroco{
         val UM_REAL = 1
     }
 
-    fun calculaTroco(valorCompra: BigDecimal, valorRecebido: BigDecimal): List<Int> {
+    fun calculaTroco(valorCompra: BigDecimal, valorRecebido: BigDecimal): Map<Int, Int> {
         var diferenca : BigDecimal = valorRecebido - valorCompra
         var listDeTroco : List<Int>? = null
-
-
 
         if(valorCompra.compareTo(valorRecebido) != 0){
 
@@ -18,7 +16,7 @@ class PassaTroco{
             listDeTroco = ArrayList()
             listDeTroco.add(1)
 
-            return listOf(1)
+            return mapOf(1 to 1)
         }
 
         return listOf<Int>()
