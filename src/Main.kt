@@ -10,13 +10,20 @@ class PassaTroco{
         var diferenca : BigDecimal = valorRecebido - valorCompra
         var listDeTroco : Map<Int, Int> = mapOf()
 
-        if(valorCompra.compareTo(valorRecebido) != 0){
+        if(valorRecebido >= valorCompra){
 
             return mapOf(1 to 1)
         }
 
+        getMaiorCedula(diferenca)
+
         return listDeTroco
     }
 
+    private fun getMaiorCedula(diferenca: BigDecimal) {
+        when(diferenca){
+            1 -> UM_REAL
+        }
+    }
 }
 

@@ -21,11 +21,6 @@ class TrocoTest : Spek({
             assertEquals(troco.size ,1)
             assertEquals(troco.get(PassaTroco.UM_REAL) ,1)
         }
-        it("verificar a quantidade de cedulas com valor de troco igual a 1"){
-            val troco = passaTroco.calculaTroco(BigDecimal("10"), BigDecimal("12"))
-            assertEquals(troco.size ,2)
-//            assertEquals(troco.get(PassaTroco.UM_REAL) ,1)
-        }
 
 
 //        it("verificar a quantidade de cedulas com valor de troco igual a 2"){
