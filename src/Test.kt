@@ -20,8 +20,11 @@ class TrocoTest : Spek({
     describe("um passador de troco") {
         val passaTroco = PassaTroco()
 
+
+
         it("sem troco, deve retornar uma list vazia") {
             val troco= passaTroco.calculaTroco(BigDecimal("10"), BigDecimal("10"))
+            listOf<BigDecimal>(BigDecimal("10"), BigDecimal("10"))
             assertEquals(troco,listOf<BigDecimal>() )
         }
 
