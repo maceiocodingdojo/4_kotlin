@@ -15,6 +15,12 @@ class TrocoTest : Spek({
             val troco = passaTroco.calculaTroco(BigDecimal("10"), BigDecimal("15"))
             assertEquals(troco.isNotEmpty(), true)
         }
+
+        it("verificar se o valor recebido é menor valor total"){
+            val troco = passaTroco.calculaTroco(BigDecimal("10"), BigDecimal("5"))
+            assertEquals(troco, listOf<BigDecimal>())
+        }
+
     }
 })
 

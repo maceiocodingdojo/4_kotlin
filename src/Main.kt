@@ -6,6 +6,10 @@ class PassaTroco{
         var diferenca : BigDecimal = valorRecebido - valorCompra;
         var listDeTroco : List<BigDecimal>? = null;
 
+        if(valorCompra > valorRecebido){
+            return listOf<BigDecimal>()
+        }
+
         if(valorCompra.compareTo(valorRecebido) != 0){
             return listOf(BigDecimal.ONE)
         }
