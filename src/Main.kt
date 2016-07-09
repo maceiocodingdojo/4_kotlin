@@ -1,7 +1,10 @@
-class Main {
+import java.math.BigDecimal
 
-    val moedas
+class PassaTroco{
+    fun calculaTroco(valorCompra: BigDecimal, valorRecebido: BigDecimal): Any? {
 
+        return listOf<BigDecimal>()
+    }
 
 }
 

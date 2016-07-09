@@ -1,3 +1,5 @@
+import junit.framework.Assert.*
+import org.jetbrains.spek.api.Spek
 import java.math.BigDecimal
 
 //class SimpleTest : Spek({
@@ -20,17 +22,13 @@ class TrocoTest : Spek({
     describe("um passador de troco") {
         val passaTroco = PassaTroco()
 
-
-
         it("sem troco, deve retornar uma list vazia") {
             val troco= passaTroco.calculaTroco(BigDecimal("10"), BigDecimal("10"))
-            listOf<BigDecimal>(BigDecimal("10"), BigDecimal("10"))
-            assertEquals(troco,listOf<BigDecimal>() )
+            assertEquals(troco,listOf<BigDecimal>())
         }
-
-        it("should return the result of subtracting the second number from the first number") {
-            val subtract = calculator.subtract(4, 2)
-            assertEquals(2, subtract)
+        it("Agora temos troco"){
+            val
         }
     }
 })
+
