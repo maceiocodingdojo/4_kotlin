@@ -21,6 +21,10 @@ class TrocoTest : Spek({
             assertEquals(troco, listOf<BigDecimal>())
         }
 
+        it("verificar a quantidade de cedulas "){
+            val troco = passaTroco.calculaTroco(BigDecimal("10"), BigDecimal("1"))
+            assertEquals(troco, troco.size == 9)
+        }
     }
 })
 

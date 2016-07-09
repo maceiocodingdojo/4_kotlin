@@ -10,11 +10,13 @@ class PassaTroco{
             return listOf<BigDecimal>()
         }
 
+
         if(valorCompra.compareTo(valorRecebido) != 0){
+
+            var cedula : BigDecimal = diferenca
+
             return listOf(BigDecimal.ONE)
         }
-
-
 
         return listOf<BigDecimal>()
     }
