@@ -23,7 +23,7 @@ class TrocoTest : Spek({
 
         it("verificar a quantidade de cedulas "){
             val troco = passaTroco.calculaTroco(BigDecimal("10"), BigDecimal("1"))
-            assertEquals(troco, troco.size == 9)
+            assertEquals(troco.get(0) ,9)
         }
     }
 })

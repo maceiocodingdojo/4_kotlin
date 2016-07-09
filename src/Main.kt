@@ -14,6 +14,8 @@ class PassaTroco{
         if(valorCompra.compareTo(valorRecebido) != 0){
 
             var cedula : BigDecimal = diferenca
+            listDeTroco = ArrayList()
+            listDeTroco.add(cedula)
 
             return listOf(BigDecimal.ONE)
         }
