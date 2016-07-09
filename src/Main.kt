@@ -2,10 +2,15 @@ import java.math.BigDecimal
 import java.util.*
 
 class PassaTroco{
-    val UM_REAL = 1
+    companion object{
+        val UM_REAL = 1
+    }
+
     fun calculaTroco(valorCompra: BigDecimal, valorRecebido: BigDecimal): List<Int> {
         var diferenca : BigDecimal = valorRecebido - valorCompra
         var listDeTroco : List<Int>? = null
+
+
 
         if(valorCompra.compareTo(valorRecebido) != 0){
 
