@@ -10,9 +10,9 @@ class PassaTroco{
         var diferenca : BigDecimal = valorRecebido - valorCompra
         var listDeTroco : Map<Int, Int> = mapOf()
 
-        if(valorRecebido >= valorCompra){
+        if(valorRecebido > valorCompra){
 
-            return mapOf(1 to 1)
+            return mapOf(getMaiorCedula(diferenca) to 1)
         }
 
         getMaiorCedula(diferenca)
@@ -20,9 +20,11 @@ class PassaTroco{
         return listDeTroco
     }
 
-    private fun getMaiorCedula(diferenca: BigDecimal) {
-        when(diferenca){
-            1 -> UM_REAL
+    private fun getMaiorCedula(diferenca: BigDecimal) : Int{
+
+        return when(diferenca){
+            BigDecimal("1") -> UM_REAL
+            else -> 0
         }
     }
 }
